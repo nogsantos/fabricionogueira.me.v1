@@ -62,7 +62,7 @@ if (devMode) {
 /**
  * Reducers
  */
-const store = createStore(reducer /* preloadedState, */, ...devTools);
+const store = createStore(reducer, ...devTools);
 /**
  * Render
  */
