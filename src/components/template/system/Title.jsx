@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import config from 'react-global-configuration';
+import React, { Component } from "react";
+import config from "react-global-configuration";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Content = styled.div`
     -webkit-transition: 0.3s;
@@ -23,7 +23,7 @@ class Title extends Component {
      */
     constructor() {
         super();
-        this.colors = config.get('syscolor');
+        this.colors = config.get("syscolor");
     }
     /**
      *
@@ -34,9 +34,9 @@ class Title extends Component {
         if (this.props.colors) {
             this.colors = this.props.colors;
         }
-        const content = document.getElementById('index-banner');
+        const content = document.getElementById("index-banner");
         content.style.opacity = 1;
-        content.style.visibility = 'visible';
+        content.style.visibility = "visible";
     }
     /**
      *
@@ -45,11 +45,18 @@ class Title extends Component {
      */
     render() {
         return (
-            <Content className={`section z-depth-2 ${this.colors.bg}`} id="index-banner">
+            <Content
+                className={`section z-depth-2 ${this.colors.bg}`}
+                id="index-banner"
+            >
                 <div className="row">
                     <div className="col s12 m9 l9 xl9 center-on-small-only">
-                        <h1 className={`header ${this.colors.text}`}>{this.props.title}</h1>
-                        <h4 className={`header ${this.colors.subtext}`}>{this.props.subtitle}</h4>
+                        <h1 className={`header ${this.colors.text}`}>
+                            {this.props.title}
+                        </h1>
+                        <h4 className={`header ${this.colors.subtext}`}>
+                            {this.props.subtitle}
+                        </h4>
                     </div>
                 </div>
             </Content>

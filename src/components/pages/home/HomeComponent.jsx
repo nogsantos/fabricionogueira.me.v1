@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 /**
  * HomeComponent component
  *
@@ -6,7 +6,6 @@ import React, { Component } from 'react';
  * @extends {Component}
  */
 class HomeComponent extends Component {
-
     /**
      * Rendering
      *
@@ -16,7 +15,7 @@ class HomeComponent extends Component {
     render() {
         return (
             <div className="content">
-                <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+                <div dangerouslySetInnerHTML={{ __html: this.props.content }} />
             </div>
         );
     }

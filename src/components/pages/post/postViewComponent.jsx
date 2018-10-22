@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import {
-    Title,
-    Loading,
-} from '../../template/system';
-import {strip_tags} from '../../../utils/functions';
+import { Title, Loading } from "../../template/system";
+import { strip_tags } from "../../../utils/functions";
 /**
  *
  *
@@ -17,15 +14,15 @@ class PostViewComponent extends Component {
      * @param {any} props
      * @memberof PostViewComponent
      */
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            title: 'Carregando...',
-            subtitle: 'Por favor aguarde.',
-            content: '',
+            title: "Carregando...",
+            subtitle: "Por favor aguarde.",
+            content: "",
             relatedPosts: [],
-            loading: true,
-        }
+            loading: true
+        };
     }
     /**
      * Will receive the props
@@ -38,7 +35,7 @@ class PostViewComponent extends Component {
                 title: props.content.title,
                 subtitle: props.content.subtitle,
                 content: props.content.content,
-                relatedPosts: props.content['jetpack-realted-posts'],
+                relatedPosts: props.content["jetpack-realted-posts"],
                 loading: props.isLoading
             };
         });
@@ -46,13 +43,16 @@ class PostViewComponent extends Component {
     /**
      * Prepare the render
      */
-    DataRender = () =>{
+    DataRender = () => {
         return (
             <div className="row">
-                <div className="col s12" dangerouslySetInnerHTML={{__html: this.state.content}}></div>
+                <div
+                    className="col s12"
+                    dangerouslySetInnerHTML={{ __html: this.state.content }}
+                />
             </div>
-        )
-    }
+        );
+    };
     /**
      * Render
      *
@@ -62,12 +62,13 @@ class PostViewComponent extends Component {
     render() {
         return (
             <section>
-                <Title title={strip_tags(this.state.title)} subtitle={strip_tags(this.state.subtitle)} />
-                {
-                    this.state.loading ? <Loading /> : <this.DataRender />
-                }
+                <Title
+                    title={strip_tags(this.state.title)}
+                    subtitle={strip_tags(this.state.subtitle)}
+                />
+                {this.state.loading ? <Loading /> : <this.DataRender />}
             </section>
-        )
+        );
     }
 }
 

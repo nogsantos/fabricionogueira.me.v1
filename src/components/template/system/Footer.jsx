@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 /**
  *
  * @class Footer
@@ -9,12 +9,12 @@ class Footer extends Component {
      * Creates an instance of Footer.
      * @memberof Footer
      */
-    constructor(){
+    constructor() {
         super();
 
         this.state = {
-            currentYear : new Date().getFullYear()
-        }
+            currentYear: new Date().getFullYear()
+        };
     }
     /**
      * Check user browser
@@ -22,26 +22,39 @@ class Footer extends Component {
      * @memberof Footer
      */
     iEVerify = () => {
-        return (/MSIE 10/i.test(navigator.userAgent) || /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent));
-    }
+        return (
+            /MSIE 10/i.test(navigator.userAgent) ||
+            /MSIE 9/i.test(navigator.userAgent) ||
+            /rv:11.0/i.test(navigator.userAgent)
+        );
+    };
     /**
      *
      * @returns
      * @memberof Footer
      */
-    render(){
+    render() {
         return (
             <div className="container">
                 <div className="row">
-                    {
-                        !this.iEVerify ? ' ' :
+                    {!this.iEVerify ? (
+                        " "
+                    ) : (
                         <div className="col s12 m12 offset-m1 xl12">
                             <div className="footer-copyright text-center">
-                                &copy; Fabricio Nogueira {this.state.currentYear}
-                                <a className="grey-text text-darken-1 right" target="_blank" rel="noopener noreferrer" href="mailto:nogsantos@gmail.com">nogsantos@gmail.com</a>
+                                &copy; Fabricio Nogueira{" "}
+                                {this.state.currentYear}
+                                <a
+                                    className="grey-text text-darken-1 right"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="mailto:nogsantos@gmail.com"
+                                >
+                                    nogsantos@gmail.com
+                                </a>
                             </div>
                         </div>
-                    }
+                    )}
                 </div>
             </div>
         );

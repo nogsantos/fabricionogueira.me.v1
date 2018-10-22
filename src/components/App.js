@@ -1,11 +1,7 @@
-import React, {Component} from 'react';
-import config from 'react-global-configuration';
+import React, { Component } from "react";
+import config from "react-global-configuration";
 
-import {
-    Nav,
-    Footer,
-    Content
-} from './template/system';
+import { Nav, Footer, Content } from "./template/system";
 /**
  * Defining the template
  *
@@ -17,15 +13,15 @@ class App extends Component {
      * Creates an instance of App.
      * @memberof App
      */
-    constructor(){
+    constructor() {
         super();
 
         config.set({
             syscolor: {
-                bg: 'grey lighten-3',
-                bgaux: 'grey lighten-3',
-                text: 'grey-text text-darken-2',
-                subtext: 'grey-text text-darken-1',
+                bg: "grey lighten-3",
+                bgaux: "grey lighten-3",
+                text: "grey-text text-darken-2",
+                subtext: "grey-text text-darken-1"
             }
         });
     }

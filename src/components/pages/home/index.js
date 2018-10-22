@@ -1,15 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-import DocumentTitle from 'react-document-title';
-import axios from 'axios';
-import { setupCache } from 'axios-cache-adapter'
+import DocumentTitle from "react-document-title";
+import axios from "axios";
+import { setupCache } from "axios-cache-adapter";
 
-import {
-    Title,
-    Loading,
-} from '../../template/system';
-import {AppConf} from '../../../utils/constants';
-import HomeComponent from './HomeComponent';
+import { Title, Loading } from "../../template/system";
+import { AppConf } from "../../../utils/constants";
+import HomeComponent from "./HomeComponent";
 
 const cache = setupCache({
     maxAge: 31536000
@@ -30,19 +27,19 @@ class Home extends Component {
      * Defining static class params
      */
     static params = {
-        title: 'Fabricio Nogueira',
-        subtitle: '$uname -a',
+        title: "Fabricio Nogueira",
+        subtitle: "$uname -a"
     };
     /**
      * Creates an instance of Home.
      * @param {any} props
      * @memberof Home
      */
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            content: '',
-            isLoading: true,
+            content: "",
+            isLoading: true
         };
     }
     /**
@@ -50,15 +47,15 @@ class Home extends Component {
      *
      * @memberof Home
      */
-    componentDidMount(){
+    componentDidMount() {
         api({
-            url: 'https://apisite.fabricionogueira.me/wp-json/wp/v2/pages/11',
-            method: 'get'
+            url: "https://apisite.fabricionogueira.me/wp-json/wp/v2/pages/11",
+            method: "get"
         }).then(response => {
-            const posts = response.data.content.rendered
+            const posts = response.data.content.rendered;
             this.setState({
                 content: posts,
-                isLoading: !this.state.isLoading,
+                isLoading: !this.state.isLoading
             });
         });
     }
@@ -71,11 +68,16 @@ class Home extends Component {
     render() {
         return (
             <section>
-                <DocumentTitle title={AppConf.name +' » '+Home.params.title} />
-                <Title title={Home.params.title} subtitle={Home.params.subtitle}  />
-                {
-                    this.state.isLoading ? <Loading /> : <HomeComponent content={this.state.content}/>
-                }
+                <DocumentTitle title={AppConf.name + " » Home"} />
+                <Title
+                    title={Home.params.title}
+                    subtitle={Home.params.subtitle}
+                />
+                {this.state.isLoading ? (
+                    <Loading />
+                ) : (
+                    <HomeComponent content={this.state.content} />
+                )}
             </section>
         );
     }
