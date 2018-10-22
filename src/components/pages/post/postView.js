@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
 import axios from "axios";
+import DocumentTitle from "react-document-title";
 import { setupCache } from "axios-cache-adapter";
-
+import { AppConf } from "../../../utils/constants";
 import PostViewComponent from "./postViewComponent";
 
 const cache = setupCache({
@@ -63,7 +64,14 @@ class PostView extends Component {
      * @memberof PostView
      */
     render() {
-        return <PostViewComponent content={this.state} />;
+        return (
+            <article>
+                <DocumentTitle
+                    title={AppConf.name + " » " + this.state.title}
+                />
+                <PostViewComponent content={this.state} />
+            </article>
+        );
     }
 }
 

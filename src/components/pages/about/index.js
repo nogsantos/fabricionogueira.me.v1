@@ -75,7 +75,7 @@ class About extends Component {
         return (
             <section>
                 <DocumentTitle
-                    title={AppConf.name + " » " + About.params.title}
+                    title={AppConf.name + " » " + About.params.subtitle}
                 />
                 <Title
                     title={About.params.title}

@@ -60,14 +60,15 @@ class PostViewComponent extends Component {
      * @memberof PostViewComponent
      */
     render() {
+        let state = this.state;
         return (
-            <section>
+            <article>
                 <Title
-                    title={strip_tags(this.state.title)}
-                    subtitle={strip_tags(this.state.subtitle)}
+                    title={strip_tags(state.title)}
+                    subtitle={strip_tags(state.subtitle)}
                 />
                 {this.state.loading ? <Loading /> : <this.DataRender />}
-            </section>
+            </article>
         );
     }
 }

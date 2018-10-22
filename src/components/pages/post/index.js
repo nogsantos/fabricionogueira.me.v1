@@ -151,9 +151,9 @@ class Post extends Component {
             subtext: "yellow-text text-darken-2"
         };
         return (
-            <section>
+            <article>
                 <DocumentTitle
-                    title={AppConf.name + " » " + Post.params.title}
+                    title={AppConf.name + " » " + Post.params.subtitle}
                 />
                 <Title
                     title={Post.params.title}
@@ -161,7 +161,7 @@ class Post extends Component {
                     colors={colors}
                 />
                 {this.state.isLoading ? <Loading /> : <this.DataRender />}
-            </section>
+            </article>
         );
     }
 }
