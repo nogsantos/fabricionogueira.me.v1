@@ -1,6 +1,6 @@
 {
-  "name": "react-base",
-  "version": "2.0.0",
+  "name": "fabricio-nogueira",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "commit": "git-cz",
@@ -62,5 +62,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "engines": {
+    "node": ">=10.14.0"
+  }
 }

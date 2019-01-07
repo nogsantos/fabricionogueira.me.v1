@@ -1,6 +1,10 @@
-# App
+# Fabricio Nogueira
+
+Personal web site teplate
 
 ## Setup
+
+To install [Yarn](https://yarnpkg.com/lang/en/docs/install)
 
 * `git clone ...`
 * `cd dir/`
