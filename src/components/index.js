@@ -4,6 +4,4 @@ export { default as AppFooter } from './app-footer';
 export { default as AppLoading } from './app-loading';
 export { default as AppNav } from './app-nav';
 export { default as AppTitle } from './app-title';
-
-// export { default as Content } from './Content.jsx';
-// export { default as CardsActions } from './CardsActions.jsx';
+export { default as WakaCharts } from './waka-charts';
