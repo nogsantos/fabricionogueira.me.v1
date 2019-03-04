@@ -5,18 +5,18 @@
  */
 
 const initialState = {
-    authenticated: false
+	authenticated: false
 };
 
 function reducer(state = initialState, action) {
-    // switch (action.type) {
-    //     case INIT:
-    //         return initApp(state, initialState);
-    //         break;
-    //     default:
-    //         return state;
-    //         break;
-    // }
+	// switch (action.type) {
+	//     case INIT:
+	//         return initApp(state, initialState);
+	//         break;
+	//     default:
+	//         return state;
+	//         break;
+	// }
 }
 
 export default reducer;

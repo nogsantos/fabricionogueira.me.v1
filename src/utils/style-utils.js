@@ -13,7 +13,7 @@
  * @returns
  */
 export function truncate(width) {
-    return `
+	return `
       width: ${width};
       white-space: nowrap;
       overflow: hidden;

@@ -3,11 +3,11 @@
  * is set to true and resets everything else inside the state property.
  */
 export default (state, initialAppState) => {
-    return {
-        ...state,
-        appState: {
-            ...initialAppState,
-            authenticated: false,
-        }
-    }
+	return {
+		...state,
+		appState: {
+			...initialAppState,
+			authenticated: false
+		}
+	};
 };
